@@ -1,5 +1,5 @@
 {
-  "name": "webpconverterplugin",
+  "name": "capacitor-ios-webp-converter",
   "version": "1.0.0",
   "description": "webp conversion",
   "main": "dist/plugin.cjs.js",
@@ -311,5 +311,8 @@
     "yaml": "^1.10.2",
     "yocto-queue": "^0.1.0"
   },
-  "homepage": "https://github.com/sinanverve7/webpconverter#readme"
+  "homepage": "https://github.com/sinanverve7/webpconverter#readme",
+  "directories": {
+    "example": "example"
+  }
 }
