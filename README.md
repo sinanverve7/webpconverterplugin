@@ -1,6 +1,6 @@
 # webpconverterplugin
 
-webp conversion
+convert jpeg image from Camera/Gallery to webp format (iOS only)
 
 ## Install
 
