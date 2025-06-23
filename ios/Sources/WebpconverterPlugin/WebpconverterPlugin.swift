@@ -32,13 +32,13 @@ public class WebpconverterPlugin: CAPPlugin, CAPBridgedPlugin {
     @objc func convertToWebp(_ call: CAPPluginCall) {
         ensureWebPCoderRegistered()
 
-        guard let input = call.getString("input") else {
-            call.reject("Missing input fileUri")
+        guard let fileUri = call.getString("fileUri") else {
+            call.reject("Missing fileUri")
             return
         }
 
-        let quality = call.getInt("quality") ?? 80
-        let cleanedPath = input.replacingOccurrences(of: "file://", with: "")
+        let quality = call.getInt("quality") ?? 100
+        let cleanedPath = fileUri.replacingOccurrences(of: "file://", with: "")
         guard let image = UIImage(contentsOfFile: cleanedPath) else {
             call.reject("Failed to load image at path: \(cleanedPath)")
             return
@@ -55,14 +55,14 @@ public class WebpconverterPlugin: CAPPlugin, CAPBridgedPlugin {
 
         do {
             try webpData.write(to: outputURL)
-            call.resolve(["path": outputURL.absoluteString])
+            call.resolve(["webpFileUri": outputURL.absoluteString])
         } catch {
             call.reject("Failed to write WebP file: \(error.localizedDescription)")
         }
     }
 
     @objc func deleteTempFile(_ call: CAPPluginCall) {
-        guard let path = call.getString("path") else {
+        guard let path = call.getString("fileUri") else {
             call.reject("Missing file path")
             return
         }

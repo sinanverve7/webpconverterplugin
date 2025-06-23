@@ -69,23 +69,23 @@ clearAllTempWebps() => Promise<{ cleared: boolean; }>
 
 #### ConvertToWebpResult
 
-| Prop       | Type                |
-| ---------- | ------------------- |
-| **`path`** | <code>string</code> |
+| Prop              | Type                | Description                                       |
+| ----------------- | ------------------- | ------------------------------------------------- |
+| **`webpFileUri`** | <code>string</code> | converted image fileUri ( stored in temp folder). |
 
 
 #### ConvertToWebpOptions
 
-| Prop          | Type                |
-| ------------- | ------------------- |
-| **`input`**   | <code>string</code> |
-| **`quality`** | <code>number</code> |
+| Prop          | Type                | Description                                   |
+| ------------- | ------------------- | --------------------------------------------- |
+| **`fileUri`** | <code>string</code> | fileUri of jpeg image to convert to webp.     |
+| **`quality`** | <code>number</code> | quality fo resulting webp image default 100%. |
 
 
 #### DeleteFileOptions
 
-| Prop       | Type                |
-| ---------- | ------------------- |
-| **`path`** | <code>string</code> |
+| Prop          | Type                | Description                                                                  |
+| ------------- | ------------------- | ---------------------------------------------------------------------------- |
+| **`fileUri`** | <code>string</code> | temporary webp image fileUri ( stored in temp folder) for removing manually. |
 
 </docgen-api>
