@@ -41,27 +41,6 @@ class ViewController: CAPBridgeViewController {
 📄 `ios/App/App/AppDelegate.swift`
 
 ```swift
-import UIKit
-import Capacitor
-
-@UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-  var window: UIWindow?
-
-  internal func application(
-    _ application: UIApplication,
-    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
-  ) -> Bool {
-    let vc = ViewController()        // 👈 your custom ViewController
-    window = UIWindow(frame: UIScreen.main.bounds)
-    window?.rootViewController = vc
-    window?.makeKeyAndVisible()
-    return true
-  }
-}
-```
-
----
 
 ## 🖥 JavaScript Binding
 
