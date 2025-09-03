@@ -4,7 +4,7 @@ Convert **JPEG images** from Camera/Gallery to **WebP format (iOS only)** using 
 
 ---
 
- * Please read the Capacitor iOS Plugin Development Guide
+ * Please read the Capacitor iOS Plugin Development Guide to create a custom plugin
  * here: https://capacitorjs.com/docs/plugins/ios
 
 Sync with Capacitor befor running the app:
